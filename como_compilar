@@ -1,0 +1,3 @@
+g++ -ggdb -std=c++11 getImages.cpp -o getImages `pkg-config --cflags --libs opencv` -lopencv_video -lpthread
+g++ -ggdb -std=c++11 getContour.cpp -o getContour `pkg-config --cflags --libs opencv` -lopencv_video
+g++ -std=c++11 getAllContours.cpp -o getAllContours
