@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
   string com;
-  for(int i=0;i<36;i++){
+  for(int i=0;i<72;i++){
     com = "./getContour "+to_string(i);
     system(com.c_str());
   }

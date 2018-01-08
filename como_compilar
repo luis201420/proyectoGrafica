@@ -1,3 +1,7 @@
 g++ -ggdb -std=c++11 getImages.cpp -o getImages `pkg-config --cflags --libs opencv` -lopencv_video -lpthread
 g++ -ggdb -std=c++11 getContour.cpp -o getContour `pkg-config --cflags --libs opencv` -lopencv_video
 g++ -std=c++11 getAllContours.cpp -o getAllContours
+g++ -ggdb -std=c++11 getPoints.cpp -o getPoints `pkg-config --cflags --libs opencv` -lopencv_video
+g++ -std=c++11 grafica.cpp -o grafica -lGL -lGLU -lglut
+python normalize.py
+g++ -std=c++11 bun10.cpp -o malla -lGL -lGLU -lglut

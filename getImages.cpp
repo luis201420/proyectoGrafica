@@ -17,8 +17,8 @@ void tomar_foto(){
   cv::Mat bgrMap1;
   std::string snapshotFilename = "0";
 
-  while(cont < 36){
-    usleep(45000000/36);
+  while(cont < 72){
+    usleep(45000000/72);
     TheVideoCapturer.retrieve(bgrMap1);
     cv::cvtColor(bgrMap1, contours, CV_BGR2GRAY);
     cv::imwrite("images/"+ snapshotFilename + ".png", contours);
@@ -31,7 +31,8 @@ void tomar_foto(){
 int main(int argc, char *argv[]) {
   char key = 0;
 
-  TheVideoCapturer.open("http://192.168.1.39:8080/video?x.mjpeg");
+  //TheVideoCapturer.open("http://192.168.1.39:8080/video?x.mjpeg");
+  TheVideoCapturer.open("http://10.81.236.7:8080/video?x.mjpeg");
 
   if (!TheVideoCapturer.isOpened()) {
     std::cerr<<"Could not open video"<<std::endl;

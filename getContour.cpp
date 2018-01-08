@@ -33,10 +33,16 @@ int main(int argc, char *argv[]) {
         g=intensity.val[1];
         b=intensity.val[2];
         prom=(r+g+b)/3;
-        if(prom<230){
+        if(prom<130){
           intensity.val[0]=0;
           intensity.val[1]=0;
           intensity.val[2]=0;
+          f.at<cv::Vec3b>(i, j) = intensity;
+        }
+        else{
+          intensity.val[0]=255;
+          intensity.val[1]=255;
+          intensity.val[2]=255;
           f.at<cv::Vec3b>(i, j) = intensity;
         }
       }
